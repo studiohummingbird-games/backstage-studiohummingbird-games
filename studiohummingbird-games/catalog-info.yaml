@@ -1,0 +1,27 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-location
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: studiohummingbird-games-local-catalog
+  title: studiohummingbird-games Local catalog
+spec:
+  type: file
+  targets:
+    - ./groups/website-integrators/catalog-info.yaml
+    - ./users/zymus/catalog-info.yaml
+    - ./swtor/catalog-info.yaml
+    - ./wip-templates/catalog-info.yaml
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-location
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: studiohummingbird-games-github-catalog
+  title: studiohummingbird.games Github Catalog
+spec:
+  type: url
+  targets:
+    - https://github.com/studiohummingbird-games/currency-backend/blob/master/catalog-info.yaml
+    - https://github.com/studiohummingbird-games/new-entity-template/blob/master/catalog-info.yaml
+    - https://github.com/studiohummingbird-games/service-ktor-backend-template/blob/master/catalog-info.yaml
+    - https://github.com/studiohummingbird-games/stronghold-backend/blob/master/catalog-info.yaml

@@ -1,0 +1,11 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-location
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: swtor-catalog
+spec:
+  type: file
+  targets:
+    - ./currency/apis/currency-api/catalog-info.yaml
+    - ./currency/groups/operators/catalog-info.yaml
+    - ./currency/systems/currency/catalog-info.yaml

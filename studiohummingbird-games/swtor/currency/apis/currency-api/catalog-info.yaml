@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: currency-api
+  description: The Currency API.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags: [kotlin, multiplatform]
+spec:
+  type: bundle
+  owner: currency-operators
+  lifecycle: experimental
+  definition: undefined
+  system: system-currency

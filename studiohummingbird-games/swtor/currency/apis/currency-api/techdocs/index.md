@@ -1,0 +1,1 @@
+blank index.md in currency-api/techdocs

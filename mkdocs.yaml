@@ -1,0 +1,6 @@
+site_name: backstage-studiohummingbird-games
+docs_dir: techdocs
+plugins:
+  - techdocs-core
+nav:
+  - Index: index.md

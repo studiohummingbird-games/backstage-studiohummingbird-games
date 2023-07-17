@@ -1,0 +1,10 @@
+[versions]
+arrowKt = "1.2.0-RC"
+inikio = "0.2-SNAPSHOT"
+
+[libraries]
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrowKt" }
+arrow-fx-coroutines = { group = "io.arrow-kt", name = "arrow-fx-coroutines", version.ref = "arrowKt" }
+inikio = { group = "com.github.serras.inikio", name="inikio-core", version.ref = "inikio" }
+
+[plugins]

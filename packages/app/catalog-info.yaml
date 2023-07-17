@@ -1,0 +1,13 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-studiohummingbird-games-website
+  description: Website for Backstage of studiohummingbird.games
+  annotations:
+    github.com/project-slug: studiohummingbird-games/backstage-studiohummingbird-games
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: group:website-integrators
+  lifecycle: experimental

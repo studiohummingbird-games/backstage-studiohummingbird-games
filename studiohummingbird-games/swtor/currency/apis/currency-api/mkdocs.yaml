@@ -1,0 +1,4 @@
+site_name: currency-api
+docs_dir: techdocs
+plugins:
+  - techdocs-core
