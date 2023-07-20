@@ -1,0 +1,8 @@
+[versions]
+arrowKt = "1.2.0-RC"
+
+[libraries]
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrowKt" }
+arrow-fx-coroutines = { group = "io.arrow-kt", name = "arrow-fx-coroutines", version.ref = "arrowKt" }
+
+[plugins]

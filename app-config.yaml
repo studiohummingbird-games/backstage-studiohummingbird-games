@@ -3,7 +3,7 @@ app:
   baseUrl: http://localhost:3000
 
 organization:
-  name: My Company
+  name: studiohummingbird.games
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -75,28 +75,27 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    - type: url
+      target: https://github.com/studiohummingbird-games/backstage-studiohummingbird-games/blob/master/catalog-info.yaml
+      rules:
+        - allow: [Component]
     - type: file
-      target: ../../examples/entities.yaml
-
-    # Local example template
+      target: ../../studiohummingbird-games/swtor/currency/apis/currency-api/catalog-info.yaml
+      rules:
+        - allow: [API]
     - type: file
-      target: ../../examples/template/template.yaml
+      target: ../../studiohummingbird-games/swtor/currency/groups/operators/catalog-info.yaml
+      rules:
+        - allow: [Group]
+    - type: file
+      target: ../../studiohummingbird-games/swtor/currency/systems/currency/catalog-info.yaml
+      rules:
+        - allow: [System]
+    - type: file
+      target: ../../studiohummingbird-games/templates/service-ktor-backend/catalog-info.yaml
       rules:
         - allow: [Template]
-
-    # Local example organizational data
     - type: file
-      target: ../../examples/org.yaml
+      target: ../../studiohummingbird-games/users/zymus/catalog-info.yaml
       rules:
-        - allow: [User, Group]
-
-    ## Uncomment these lines to add more example data
-    # - type: url
-    #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
-
-    ## Uncomment these lines to add an example org
-    # - type: url
-    #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
-    #   rules:
-    #     - allow: [User, Group]
+        - allow: [User]

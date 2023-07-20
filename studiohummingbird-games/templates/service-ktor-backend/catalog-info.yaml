@@ -2,17 +2,20 @@ apiVersion: scaffolder.backstage.io/v1beta3
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
-  name: example-nodejs-template
-  title: Example Node.js Template
-  description: An example template for the scaffolder that creates a simple Node.js service
+  name: service-ktor-backend
+  title: Ktor Service Backend
+  description: Create a Ktor Service Backend.
+  tags:
+    - kotlin
+    - ktor
 spec:
-  owner: user:guest
+  owner: user:zymus
   type: service
 
   # These parameters are used to generate the input form in the frontend, and are
   # used to gather input data for the execution of the template.
   parameters:
-    - title: Fill in some steps
+    - title: What would you like to call it?
       required:
         - name
       properties:
@@ -23,7 +26,7 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-    - title: Choose a location
+    - title: Where should that be created?
       required:
         - repoUrl
       properties:
@@ -43,7 +46,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./content
+        url: ./template
         values:
           name: ${{ parameters.name }}
 
